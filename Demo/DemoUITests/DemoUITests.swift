@@ -1,10 +1,3 @@
-//
-//  DemoUITests.swift
-//  DemoUITests
-//
-//  Created by Michael Henry Pantaleon on 5/8/2025.
-//
-
 import XCTest
 
 final class DemoUITests: XCTestCase {

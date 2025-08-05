@@ -1,12 +1,5 @@
-//
-//  DemoTests.swift
-//  DemoTests
-//
-//  Created by Michael Henry Pantaleon on 5/8/2025.
-//
-
-@testable import Demo
 import XCTest
+@testable import Demo
 
 final class DemoTests: XCTestCase {
     override func setUpWithError() throws {
