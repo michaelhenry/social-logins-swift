@@ -48,4 +48,10 @@ extension FacebookAuthService: DependencyKey {
             LoginManager().logOut()
         }
     )
+    public static var testValue: FacebookAuthService {
+        Self(
+            login: { _ in "" },
+            logout: {}
+        )
+    }
 }

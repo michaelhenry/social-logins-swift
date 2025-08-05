@@ -14,7 +14,11 @@ public struct SocialLoginsFeature {
         public var facebookIdToken: String?
         public var appleIdToken: String?
 
-        public init() {}
+        public init(googleIdToken: String? = nil, facebookIdToken: String? = nil, appleIdToken: String? = nil) {
+            self.googleIdToken = googleIdToken
+            self.facebookIdToken = facebookIdToken
+            self.appleIdToken = appleIdToken
+        }
     }
 
     public enum Action: Equatable {

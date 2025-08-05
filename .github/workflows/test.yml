@@ -1,0 +1,23 @@
+name: Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: [ "main" ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+
+    runs-on: macos-14
+
+    steps:
+    - uses: actions/checkout@v4
+    - run: set -o pipefail && xcodebuild test -skipMacroValidation -project Demo/Demo.xcodeproj -scheme Demo -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 16'  -enableCodeCoverage YES -resultBundlePath Tests.xcresult | xcpretty
+
+

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "53A6B23F-87A1-4CAB-8340-724C78E3DDCB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Demo.xcodeproj",
+      "identifier" : "9931001D2E422D5700ED00E2",
+      "name" : "Demo"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Demo.xcodeproj",
+        "identifier" : "9931002A2E422D5800ED00E2",
+        "name" : "DemoTests"
+      }
+    }
+  ],
+  "version" : 1
+}

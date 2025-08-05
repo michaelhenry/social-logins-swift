@@ -45,4 +45,11 @@ extension GoogleAuthService: DependencyKey {
             GIDSignIn.sharedInstance.signOut()
         }
     )
+
+    public static var testValue: GoogleAuthService {
+        Self(
+            login: { "" },
+            logout: {}
+        )
+    }
 }

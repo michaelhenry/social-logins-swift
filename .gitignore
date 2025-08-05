@@ -9,3 +9,4 @@ DerivedData/
 .netrc
 Demo/DerivedData
 Demo/.build
+Tests.xcresult

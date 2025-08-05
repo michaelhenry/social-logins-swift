@@ -20,6 +20,12 @@ extension AppleAuthService: DependencyKey {
             return try await coordinator.startLogin(input: input)
         }
     )
+
+    public static var testValue: AppleAuthService {
+        Self(
+            login: { _ in "" }
+        )
+    }
 }
 
 actor AppleAuthCoordinator {
