@@ -4,11 +4,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "SocialLogins",
+    name: "social-logins-swift",
     platforms: [.iOS(.v16)],
     products: [
         .library(
-            name: "SocialLoginsFeature",
+            name: "SocialLogins",
             targets: ["SocialLoginsFeature"]
         ),
     ],
