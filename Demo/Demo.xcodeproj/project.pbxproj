@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9931004A2E42309500ED00E2 /* SocialLoginsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 993100492E42309500ED00E2 /* SocialLoginsFeature */; };
+		99E4B2E12E426BFA00B28AC6 /* SocialLogins in Frameworks */ = {isa = PBXBuildFile; productRef = 99E4B2E02E426BFA00B28AC6 /* SocialLogins */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9931004A2E42309500ED00E2 /* SocialLoginsFeature in Frameworks */,
+				99E4B2E12E426BFA00B28AC6 /* SocialLogins in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +98,7 @@
 				993100202E422D5700ED00E2 /* Demo */,
 				9931002E2E422D5800ED00E2 /* DemoTests */,
 				993100382E422D5800ED00E2 /* DemoUITests */,
+				99E4B2DF2E426BFA00B28AC6 /* Frameworks */,
 				9931001F2E422D5700ED00E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,6 +111,13 @@
 				993100352E422D5800ED00E2 /* DemoUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		99E4B2DF2E426BFA00B28AC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +140,7 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				993100492E42309500ED00E2 /* SocialLoginsFeature */,
+				99E4B2E02E426BFA00B28AC6 /* SocialLogins */,
 			);
 			productName = Demo;
 			productReference = 9931001E2E422D5700ED00E2 /* Demo.app */;
@@ -588,9 +596,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		993100492E42309500ED00E2 /* SocialLoginsFeature */ = {
+		99E4B2E02E426BFA00B28AC6 /* SocialLogins */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SocialLoginsFeature;
+			package = 993100482E42309500ED00E2 /* XCLocalSwiftPackageReference "../../social-logins-swift" */;
+			productName = SocialLogins;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
