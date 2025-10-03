@@ -3,7 +3,7 @@ import SwiftUI
 import WebKit
 
 @Reducer
-public struct SocialLoginsFeature {
+public struct SocialLoginsFeature: Sendable {
     @Dependency(\.googleAuthService) var googleAuthService: GoogleAuthService
     @Dependency(\.facebookAuthService) var facebookAuthService: FacebookAuthService
     @Dependency(\.appleAuthService) var appleAuthService: AppleAuthService

@@ -1,7 +1,7 @@
 import AuthenticationServices
 import ComposableArchitecture
 
-public struct AppleAuthService {
+public struct AppleAuthService: Sendable {
     var login: @Sendable (AppleAuthInput) async throws -> String
 }
 
@@ -14,7 +14,7 @@ public extension DependencyValues {
 
 extension AppleAuthService: DependencyKey {
     /// For more info, please refer to https://developer.apple.com/documentation/AuthenticationServices/implementing-user-authentication-with-sign-in-with-apple
-    public static var liveValue: AppleAuthService = .init(
+    public static let liveValue: AppleAuthService = .init(
         login: { input in
             let coordinator = AppleAuthCoordinator()
             return try await coordinator.startLogin(input: input)

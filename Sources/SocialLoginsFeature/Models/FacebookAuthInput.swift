@@ -1,4 +1,4 @@
-public struct FacebookAuthInput: Hashable {
+public struct FacebookAuthInput: Hashable, Sendable {
     var permissions: [String]
     var nonce: String
 

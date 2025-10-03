@@ -1,7 +1,7 @@
 import ComposableArchitecture
 import GoogleSignIn
 
-public struct GoogleAuthService {
+public struct GoogleAuthService: Sendable {
     var login: @Sendable () async throws -> String
     var logout: @Sendable () async -> Void
 }
@@ -15,7 +15,7 @@ public extension DependencyValues {
 
 extension GoogleAuthService: DependencyKey {
     /// For more info, please refer to https://developers.google.com/identity/sign-in/ios/start-integrating#swift-package-manager
-    public static var liveValue: GoogleAuthService = .init(
+    public static let liveValue: GoogleAuthService = .init(
         login: {
             try await withCheckedThrowingContinuation { continuation in
                 DispatchQueue.main.async {

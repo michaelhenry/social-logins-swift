@@ -2,7 +2,7 @@ import ComposableArchitecture
 import FacebookCore
 import FacebookLogin
 
-public struct FacebookAuthService {
+public struct FacebookAuthService: Sendable {
     var login: @Sendable (FacebookAuthInput) async throws -> String
     var logout: @Sendable () async -> Void
 }
@@ -16,7 +16,7 @@ public extension DependencyValues {
 
 extension FacebookAuthService: DependencyKey {
     /// For more info, please refer to https://developers.facebook.com/docs/facebook-login/limited-login/ios
-    public static var liveValue: FacebookAuthService = .init(
+    public static let liveValue: FacebookAuthService = .init(
         login: { input in
             try await withCheckedThrowingContinuation { continuation in
                 DispatchQueue.main.async {

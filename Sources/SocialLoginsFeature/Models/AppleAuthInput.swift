@@ -1,6 +1,6 @@
 import AuthenticationServices
 
-public struct AppleAuthInput: Hashable {
+public struct AppleAuthInput: Hashable, Sendable {
     var scopes: [ASAuthorization.Scope]
     var nonce: String?
 
