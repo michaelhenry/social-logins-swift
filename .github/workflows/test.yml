@@ -12,15 +12,15 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DEVELOPER_DIR: "/Applications/Xcode_16.3.app"
+  DEVELOPER_DIR: "/Applications/Xcode_26.4.0.app"
 
 jobs:
   build:
 
-    runs-on: macos-15
+    runs-on: macos-26
 
     steps:
     - uses: actions/checkout@v4
-    - run: set -o pipefail && xcodebuild test -skipMacroValidation -project Demo/Demo.xcodeproj -scheme Demo -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 16'  -enableCodeCoverage YES -resultBundlePath Tests.xcresult | xcpretty
+    - run: set -o pipefail && xcodebuild test -skipMacroValidation -project Demo/Demo.xcodeproj -scheme Demo -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17'  -enableCodeCoverage YES -resultBundlePath Tests.xcresult | xcpretty
 
 
